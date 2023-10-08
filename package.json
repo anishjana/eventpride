@@ -43,6 +43,7 @@
     "url-join": "^4.0.0"
   },
   "devDependencies": {
+    "gh-pages": "^6.0.0",
     "husky": "^2.2.0",
     "postcss-color-function": "^4.1.0",
     "postcss-custom-properties": "^8.0.10",
@@ -70,7 +71,8 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "husky": {
     "hooks": {
