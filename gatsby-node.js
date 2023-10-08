@@ -1,67 +1,22 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+exports.onCreateNode = async ({
+  node,
+  loadNodeContent,
+  actions: { createNodeField },
+}) => {
+  if (node.name !== "example") return
 
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
-  return graphql(
-    `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-              }
-            }
-          }
-        }
-      }
-    `
-  ).then(result => {
-    if (result.errors) {
-      throw result.errors
-    }
-
-    // Create blog posts pages.
-    const posts = result.data.allMarkdownRemark.edges
-
-    posts.forEach((post, index) => {
-      const previous = index === posts.length - 1 ? null : posts[index + 1].node
-      const next = index === 0 ? null : posts[index - 1].node
-
-      createPage({
-        path: post.node.fields.slug,
-        component: blogPost,
-        context: {
-          slug: post.node.fields.slug,
-          previous,
-          next,
-        },
-      })
-    })
-
-    return null
-  })
-}
-
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
-
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
-    })
+  try {
+    // Ensure Gatsby loads the item into memory so that its content becomes
+    // available in the GraphQL File node. We create a child node with the file
+    // content using `createNodeField` to ensure LMDB is updated. Note that
+    // `internal.content` is for memoization and should not be used directly.
+    const nodeContent = await loadNodeContent(node)
+    createNodeField({ node, name: `content`, value: nodeContent })
+  } catch (error) {
+    console.error(error)
   }
 }
 

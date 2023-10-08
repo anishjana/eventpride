@@ -57,13 +57,6 @@ const indexQuery = graphql`
       siteMetadata {
         title
         description
-        logo {
-          childImageSharp {
-            fluid {
-              originalImg
-            }
-          }
-        }
       }
     }
 
