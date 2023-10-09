@@ -4,10 +4,8 @@ import { graphql, StaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-// import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import "../utils/normalize.css"
 import "../utils/css/screen.css"
-import { subPageImages } from "../constants/index"
 import Card from "../components/Card"
 
 const BlogIndex = ({ data }, location) => {
