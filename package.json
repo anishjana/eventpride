@@ -8,7 +8,9 @@
     "url": "https://github.com/ImedAdel/gatsby-london/issues"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.19.2",
     "autoprefixer": "^9.8.8",
+    "dotenv": "^16.3.1",
     "gatsby": "^2.4.2",
     "gatsby-image": "^2.0.41",
     "gatsby-plugin-google-analytics": "^2.0.19",

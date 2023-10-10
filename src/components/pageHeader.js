@@ -10,7 +10,7 @@ export default function PageHeader(props) {
           title ? "pt-6vw" : "py-6vw"
         }`}
       >
-        <span className={mode === "black" ? "text-white" : "text-black"}>
+        <span className={mode === "black" ? "text-gold" : "text-black"}>
           {title && <h1 className="mb-0">{title}</h1>}
           {subtitle && <h2 className="page-head-title">{subtitle}</h2>}
         </span>
