@@ -7,34 +7,40 @@ import SEO from "../components/seo"
 import "../utils/normalize.css"
 import "../utils/css/screen.css"
 import Card from "../components/Card"
+import PageHeader from "../components/pageHeader"
 
-const BlogIndex = ({ data }, location) => {
+const Index = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title
-  const siteLogo = data.site.siteMetadata.logo
   const subPages = data.allDataJson
-  console.log(siteLogo)
 
   let postCounter = 0
 
   return (
     <Layout title={siteTitle}>
       <SEO
-        title="All posts"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+        title="Welcome"
+        keywords={[
+          `event`,
+          `birthday`,
+          `wedding`,
+          `planning`,
+          `decor`,
+          `decoration`,
+          `event planning`,
+          `event management`,
+          `wedding cards`,
+          `party`,
+          `catering`,
+        ]}
       />
+      <PageHeader
+        title={siteTitle}
+        subtitle={data.site.siteMetadata.description}
+      ></PageHeader>
 
-      {data.site.siteMetadata.description && (
-        <header className="page-head">
-          <h1 className="mb-0">{siteTitle}</h1>
-          <h2 className="page-head-title">
-            {data.site.siteMetadata.description}
-          </h2>
-        </header>
-      )}
       <div className="post-feed">
         {subPages.edges.map(pages => {
           postCounter++
-
           return (
             <Card
               key={postCounter}
@@ -79,7 +85,7 @@ export default props => (
   <StaticQuery
     query={indexQuery}
     render={data => (
-      <BlogIndex location={props.location} props data={data} {...props} />
+      <Index location={props.location} props data={data} {...props} />
     )}
   />
 )
