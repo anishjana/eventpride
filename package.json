@@ -1,12 +1,10 @@
 {
-  "name": "gatsby-london",
+  "name": "eventpride",
   "private": true,
-  "description": "A custom, image-centric theme for Gatsby",
+  "description": "An event management brand",
   "version": "1.0.0",
-  "author": "Imed Adel <aadelimed@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/ImedAdel/gatsby-london/issues"
-  },
+  "author": "anish jana <anishjana007@gmail.com>",
+  
   "dependencies": {
     "@react-google-maps/api": "^2.19.2",
     "autoprefixer": "^9.8.8",
@@ -55,17 +53,14 @@
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
     "gatsby",
-    "ghost",
-    "gallery",
-    "blog",
-    "starter"
+    "event",
+    "party",
+    "wedding",
+    "birthday"
   ],
   "license": "MIT",
   "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ImedAdel/gatsby-london.git"
-  },
+ 
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",

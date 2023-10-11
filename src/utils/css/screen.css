@@ -176,6 +176,7 @@ a {
   color: var(--color-base);
   font-weight: 600;
   opacity: 0.4;
+  font-size: 26px;
 }
 
 .nav-current a,
@@ -308,9 +309,8 @@ a {
     transform: scale(1.1) translateY(-25px);
   }
   .site-head-right a {
-    padding: 5px 0;
     margin: 1px 0;
-    font-size: 2rem;
+    font-size: 26px;
   }
   .nav {
     width: 100%;
@@ -334,7 +334,11 @@ a {
   .site-head-right {
     order: 3;
     width: 100%;
-    margin-top: 3vw;
+    margin: 8px 0;
+    padding: 1px 0;
+    font-size: 2.6rem;
+    line-height: 1.15em;
+    font-weight: 200;
   }
   .social-links {
     flex-direction: column;
@@ -372,7 +376,7 @@ a {
     border-bottom: var(--color-base) 2px solid;
   }
   .site-head-open .site-head-right a {
-    opacity: 0.5;
+    opacity: 1;
   }
   .site-head-open .site-foot {
     display: block;
@@ -746,4 +750,8 @@ lord-icon {
 
 .contact-main {
   height: 60vh;
+}
+
+.contact-section .query {
+  height: fit-content;
 }

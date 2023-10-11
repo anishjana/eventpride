@@ -26,7 +26,7 @@ const Layout = props => {
           </a>
           <nav id="swup" className="site-head-left">
             <ul className="nav" role="menu">
-              <li className="nav-home nav-current" role="menuitem">
+              <li className="nav-home" role="menuitem">
                 <Link to={`/`}>Home</Link>
               </li>
               <li className="nav-about" role="menuitem">
@@ -43,9 +43,7 @@ const Layout = props => {
             </Link>
           </div>
           <div className="site-head-right">
-            <div className="social-links">
-              <Link to={`/contact`}>Contact us</Link>
-            </div>
+            <Link to={`/contact`}>Contact us</Link>
           </div>
         </div>
       </header>

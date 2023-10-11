@@ -76,12 +76,31 @@ export default function Contact() {
                 &nbsp; contact@eventpride.in
               </a>
             </span>
+            <span className="address">
+              <a
+                href="https://www.google.com/maps/place/Eventpride/@21.7782973,87.7467886,20.03z/data=!4m6!3m5!1s0x3a032705987fc727:0xae8917ef2241ae1e!8m2!3d21.7782729!4d87.7468605!16s%2Fg%2F11tdqgqn6x?hl=en-GB&entry=ttu"
+                className="flex items-start"
+                target="_blank"
+              >
+                <lord-icon
+                  src="https://cdn.lordicon.com/qgltmqni.json"
+                  trigger="hover"
+                  target=".address"
+                  colors="primary:#121331"
+                  style={{ width: "32px" }}
+                ></lord-icon>
+                <p className="ml-3 mt-2">
+                  Santanird, Hatabari, Rathtala, Contai, West Bengal, 721401,
+                  India
+                </p>
+              </a>
+            </span>
           </div>
         </div>
         <div className="contact-section h-fit query p-6 bg-grey flex flex-col min-h-0">
           <h2 className="mb-14 mt-2 break:mb-5">Have a query!</h2>
           <form method="post" action="#">
-            <div className="row gtr-uniform break:mb-8">
+            <div className="row gtr-uniform break:mb-1">
               <div className="col-6 col-12-xsmall">
                 <input
                   type="text"

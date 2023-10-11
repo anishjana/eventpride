@@ -5,7 +5,8 @@
   display: flex;
   cursor: default;
   list-style: none;
-  padding-left: 0;
+  margin-bottom: 0 !important;
+  /* padding-left: 0; */
 }
 
 .actions li {
@@ -89,5 +90,11 @@
   .actions:not(.fixed) li button.icon:before,
   .actions:not(.fixed) li .button.icon:before {
     margin-left: -0.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .actions {
+    padding-left: 0;
   }
 }

@@ -25,7 +25,7 @@ module.exports = {
         // Simple 8 row grid
 
         // Complex site-specific row configuration
-        layout: "repeat(3, 300px)",
+        layout: "repeat(3, 400px)",
       },
     },
   },

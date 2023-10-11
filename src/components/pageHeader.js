@@ -7,12 +7,20 @@ export default function PageHeader(props) {
     <>
       <header
         className={`page-head ${mode === "black" ? "bg-black" : "inherit"} ${
-          title ? "pt-6vw" : "py-6vw"
+          title ? "pt-6vw" : "py-10vw"
         }`}
       >
         <span className={mode === "black" ? "text-gold" : "text-black"}>
           {title && <h1 className="mb-0">{title}</h1>}
-          {subtitle && <h2 className="page-head-title">{subtitle}</h2>}
+          {subtitle && (
+            <h2
+              className={`page-head-title ${
+                title ? "text-inherit" : "text-6xl"
+              }`}
+            >
+              {subtitle}
+            </h2>
+          )}
         </span>
       </header>
     </>
