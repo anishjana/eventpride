@@ -43,6 +43,8 @@ const Layout = props => {
             </Link>
           </div>
           <div className="site-head-right">
+            <Link to={`/gallery`}>Gallery</Link>
+
             <Link to={`/contact`}>Contact us</Link>
           </div>
         </div>

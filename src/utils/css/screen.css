@@ -23,10 +23,19 @@ production stylesheet in assets/built/screen.css using gulp dev
 /* ---------------------------------------------------------- */
 
 body {
-  font-family: "Muli", sans-serif;
+  font-family: var(--font-sans-serif);
   background: var(--color-bg);
   transition: background 0.3s ease-out;
   transition-delay: 0.25;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading-family);
 }
 
 a {
@@ -190,7 +199,7 @@ a {
 }
 
 .site-head-center {
-  transform: translateX(-18px);
+  transform: translateX(25px);
   display: flex;
   justify-content: center;
   width: 100%;
@@ -222,7 +231,7 @@ a {
 
 @media (max-width: 900px) {
   .site-head-logo img {
-    height: 5.4rem;
+    height: 5.8rem;
   }
 }
 
@@ -765,4 +774,58 @@ lord-icon {
 
 .contact-section .query {
   height: fit-content;
+}
+
+/* gallery */
+
+.image-gallery-icon {
+  box-shadow: none !important;
+}
+
+.image-gallery-thumbnail {
+  height: 50px !important;
+}
+
+.image-gallery-thumbnail-image,
+.image-gallery-thumbnail-inner {
+  height: 42px !important;
+}
+
+img.image-gallery-thumbnail-image {
+  object-fit: contain;
+}
+
+img.image-gallery-image {
+  height: 100vh !important;
+}
+
+.video-container-gallery {
+  height: 100vh !important;
+}
+
+.video-container-gallery {
+  max-height: calc(100vh - 80px);
+}
+
+.image-gallery-icon {
+  height: 2rem !important;
+}
+
+.image-gallery-left-nav .image-gallery-svg,
+.image-gallery-right-nav .image-gallery-svg {
+  height: 5rem;
+  width: 60px;
+}
+
+.image-gallery-left-nav,
+.image-gallery-right-nav {
+  padding: 60px 10px;
+  top: 60%;
+  transform: translateY(-100%) !important;
+}
+
+.image-gallery-fullscreen-button {
+  height: 25px !important;
+  width: 25px !important;
+  padding: 0px 60px 35px 0px !important;
 }

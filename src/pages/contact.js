@@ -6,12 +6,13 @@ import { Link } from "gatsby"
 import { useHasBeenVisible } from "../utils/js/useVisibility"
 
 export default function Contact() {
+  const trigger = "loop-on-hover"
   const preload = React.useRef()
   const loaded = useHasBeenVisible(preload)
   return (
-    <div className="min-h-screen p-3 pb-4">
+    <div className="min-h-screen p-10 pb-4">
       <Helmet>
-        <script src="https://cdn.lordicon.com/bhenfmcm.js" />
+        <script src="https://cdn.lordicon.com/lordicon-1.1.0.js" />
       </Helmet>
       <div className="relative ">
         <Link to={`/`}>
@@ -34,8 +35,8 @@ export default function Contact() {
               <a href="tel:+918918227839" className="flex items-center">
                 {" "}
                 <lord-icon
-                  src="https://cdn.lordicon.com/tftaqjwp.json"
-                  trigger="hover"
+                  src="https://cdn.lordicon.com/srsgifqc.json"
+                  trigger={trigger}
                   target=".phone"
                   colors="primary:#121331"
                   style={{ width: "25px" }}
@@ -51,8 +52,8 @@ export default function Contact() {
               >
                 {" "}
                 <lord-icon
-                  src="https://cdn.lordicon.com/pkmkagva.json"
-                  trigger="hover"
+                  src="https://cdn.lordicon.com/ayhtotha.json"
+                  trigger={trigger}
                   target=".whatsapp"
                   colors="primary:#121331"
                   style={{ width: "25px" }}
@@ -67,8 +68,8 @@ export default function Contact() {
               >
                 {" "}
                 <lord-icon
-                  src="https://cdn.lordicon.com/ehfubvwr.json"
-                  trigger="hover"
+                  src="https://cdn.lordicon.com/xtzvywzp.json"
+                  trigger={trigger}
                   target=".email"
                   colors="primary:#121331"
                   style={{ width: "25px" }}
@@ -83,8 +84,8 @@ export default function Contact() {
                 target="_blank"
               >
                 <lord-icon
-                  src="https://cdn.lordicon.com/qgltmqni.json"
-                  trigger="hover"
+                  src="https://cdn.lordicon.com/wmwqvixz.json"
+                  trigger={trigger}
                   target=".address"
                   colors="primary:#121331"
                   style={{ width: "32px" }}
