@@ -1,5 +1,6 @@
 const urljoin = require("url-join")
 const siteConfig = require("./siteConfig")
+
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -43,6 +44,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/assets`,
         name: `assets`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static`,
+        name: `static`,
       },
     },
     {
@@ -114,6 +122,7 @@ module.exports = {
         icon: `content/assets/ep-icon.jpg`,
       },
     },
+
     `gatsby-plugin-netlify`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,

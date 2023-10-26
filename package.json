@@ -9,6 +9,7 @@
     "autoprefixer": "^9.8.8",
     "dotenv": "^16.3.1",
     "gatsby": "^2.4.2",
+    "gatsby-adapter-netlify": "^1.0.1",
     "gatsby-image": "^2.0.41",
     "gatsby-plugin-google-analytics": "^2.0.19",
     "gatsby-plugin-image": "^3.12.0",
