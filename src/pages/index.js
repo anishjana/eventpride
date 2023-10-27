@@ -40,7 +40,7 @@ const Index = ({ data }, location) => {
       ></PlaceHolder>
 
       <div className="bg-grey pt-6">
-        <h3 className="text-center my-6">Events that we organize!</h3>
+        <h3 className="text-center my-4vw">Events that we organize!</h3>
 
         <div className="post-feed">
           {subPages.edges.map(pages => {
