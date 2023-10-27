@@ -8,11 +8,11 @@ import "../utils/normalize.css"
 import "../utils/css/screen.css"
 import Card from "../components/card"
 import PageHeader from "../components/pageHeader"
+import PlaceHolder from "../components/placeholder"
 
 const Index = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title
   const subPages = data.allDataJson
-
   let postCounter = 0
 
   return (
@@ -33,23 +33,28 @@ const Index = ({ data }, location) => {
           `catering`,
         ]}
       />
-      <PageHeader
+      <PlaceHolder
         title={siteTitle}
         subtitle={data.site.siteMetadata.description}
-      ></PageHeader>
+        image={data.file.childImageSharp.fluid}
+      ></PlaceHolder>
 
-      <div className="post-feed">
-        {subPages.edges.map(pages => {
-          postCounter++
-          return (
-            <Card
-              key={postCounter}
-              count={postCounter}
-              data={pages}
-              postClass={`post`}
-            />
-          )
-        })}
+      <div className="bg-grey pt-6">
+        <h3 className="text-center my-6">Events that we organize!</h3>
+
+        <div className="post-feed">
+          {subPages.edges.map(pages => {
+            postCounter++
+            return (
+              <Card
+                key={postCounter}
+                count={postCounter}
+                data={pages}
+                postClass={`post`}
+              />
+            )
+          })}
+        </div>
       </div>
     </Layout>
   )
@@ -75,6 +80,14 @@ const indexQuery = graphql`
               }
             }
           }
+        }
+      }
+    }
+
+    file(relativePath: { eq: "placeholder.jpeg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }

@@ -1,6 +1,6 @@
 module.exports = {
-  name: "EventPride",
-  shortName: "EventPride",
+  name: "Event Pride",
+  shortName: "Event Pride",
   description: "A Complete Event Solution",
   prefix: "/",
   url: "https://gatsby-london.netlify.com", // Domain of your site without prefix!
