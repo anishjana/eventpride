@@ -7,7 +7,6 @@ import SEO from "../components/seo"
 import "../utils/normalize.css"
 import "../utils/css/screen.css"
 import Card from "../components/card"
-import PageHeader from "../components/pageHeader"
 import PlaceHolder from "../components/placeholder"
 
 const Index = ({ data }, location) => {

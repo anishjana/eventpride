@@ -74,10 +74,6 @@ export default function Gallery() {
     },
   ]
 
-  const _onImageLoad = event => {
-    // console.log("loaded image", event.target)
-  }
-
   return (
     <div className="min-h-screen p-10 pb-4">
       <div className="relative mb-4">
