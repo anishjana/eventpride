@@ -281,6 +281,10 @@ a {
 /* Mobile Nav Menu
 /* ---------------------------------------------------------- */
 
+.site-head {
+  margin-bottom: 3rem;
+}
+
 .nav-burger {
   display: none;
   position: absolute;
@@ -292,6 +296,7 @@ a {
 @media (max-width: 850px) {
   .site-head {
     padding: 0;
+    margin-bottom: 5rem;
   }
   .nav-burger {
     display: block;

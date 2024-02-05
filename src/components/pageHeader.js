@@ -3,6 +3,7 @@ import Layout from "./layout"
 
 export default function PageHeader(props) {
   const { title, subtitle, mode } = props
+
   return (
     <>
       <header

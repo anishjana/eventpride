@@ -84,9 +84,9 @@ const indexQuery = graphql`
       }
     }
 
-    file(relativePath: { eq: "placeholder.jpeg" }) {
+    file(relativePath: { eq: "placeholder.png" }) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 2400) {
           ...GatsbyImageSharpFluid
         }
       }
