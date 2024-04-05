@@ -3,7 +3,7 @@
   "private": true,
   "description": "An event management brand",
   "version": "1.0.0",
-  "author": "anish jana <anishjana007@gmail.com>",
+  "author": "Ankish <anishjana007@gmail.com>",
   "dependencies": {
     "@react-google-maps/api": "^2.19.2",
     "autoprefixer": "^9.8.8",
